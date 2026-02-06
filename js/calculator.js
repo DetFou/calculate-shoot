@@ -80,7 +80,9 @@ function calculatorOperandInterHandler(event) {
         case 'factorial': c = calculatorFactorialHandler(d);  break;
         case 'switch': c = calculatorSwitchSignHandler(); break;
         case 'module': c = calculatorModuleHandler(); break;
-        case 'dot': c = calculatorDotHandler(); break; 
+        case 'dot': c = calculatorDotHandler(); break;
+        case 'cos': c = Math.cos(d); break;
+        case 'sin': c = Math.sin(d); break;
     }
     input.value = c;
 }

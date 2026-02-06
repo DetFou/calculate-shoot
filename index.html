@@ -62,6 +62,8 @@
         </div >
       </div>
 
+
+    <!-- виды матриц -->
     <div id="matrixCalculator" class="content hide">
         <div class="matrix">
             <input id="matrixSize" placeholder="размерность">
@@ -80,9 +82,10 @@
         </div>
     </div>
 
+    <!-- калькулятор -->
     <div id="calculator" class="content hide">
       <input id="calculator-input" placeholder="число" disabled>
-      <div>
+       <div> <!-- цифры -->
         <button class="calculator-number">1</button>
         <button class="calculator-number">2</button>
         <button class="calculator-number">3</button>
@@ -94,22 +97,23 @@
         <button class="calculator-number">9</button>
         <button class="calculator-number">0</button>
       </div>
-      <div>
+      <div>   <!-- очитска и смена знака -->
         <button class="calculator-clear">C</button>
         <button class="calculator-operand-inter" data-operand="switch">+/-</button>
       </div>
-      <div>
+      <div>   <!-- операторы с двумя переменными -->
         <button class="calculator-operand" data-operand="add">+</button>
         <button class="calculator-operand" data-operand="sub">-</button>
         <button class="calculator-operand" data-operand="mult">*</button>
         <button class="calculator-operand" data-operand="div">/</button>
         <button class="calculator-operand" data-operand="degree">^</button>
-        <button class="calculator-operand-inter" data-operand="sqrt">
-          <img class="OperandSqrtImg" src="img\sqrt.png" alt="Icon">
-        </button>
+        <!-- операторы с однйо переменной -->
+        <button class="calculator-operand-inter" data-operand="sqrt">sqrt</button>
         <button class="calculator-operand-inter" data-operand="factorial">!</button>
         <button class="calculator-operand-inter" data-operand="module">|a|</button>
         <button class="calculator-operand-inter" data-operand="dot">.</button>
+        <button class="calculator-operand-inter" data-operand="cos">cos</button>
+        <button class="calculator-operand-inter" data-operand="sin">sin</button>
         <button class="calculator-calculate">=</button>
       </div>
         
