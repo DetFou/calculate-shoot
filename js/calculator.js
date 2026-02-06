@@ -122,9 +122,3 @@ function initCalculator() {
     //Обработать "равно"
     document.querySelector('.calculator-calculate').addEventListener('click', calculatorCalculateHandler)
 }
-
-
-
-
-
-// синус и косинус
