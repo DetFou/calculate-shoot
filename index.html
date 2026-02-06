@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Стрельба по мишеням</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='js/tabs.js'></script>
+    <script src='js/shot.js'></script>
+    <script src='js/matrix.js'></script>
+    <script src='js/calculator.js'></script>
+    <script src='js/index.js'></script>
+</head>
+<body>
+
+  <div class="tabs">
+    <div class="tab active" data-content-id="esse">Эссе</div>
+    <div class="tab" data-content-id="target">Мишени</div>
+    <div class="tab" data-content-id="matrixCalculator">Матрицы</div>
+    <div class="tab" data-content-id="calculator">Калькулятор</div>
+  </div>
+
+  <div class="contents"> <!-- контенты -->
+
+    <div id="esse" class="content">    <!-- блок с эссе -->
+      <div class="card">
+        <img src="https://sun9-86.userapi.com/s/v1/ig2/hiLiQZKzhxTnB51hg00OiyyBDKDtQkH6qs2_OVWxPE2rYw8ERYwSFbSePSXkC5S_7yK-x1gWUr-fuxUdc89GDwvd.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Аватар" class="avatar">
+        <div class="name">Минликаев Глеб</div>
+        <div class="description">sayigfiasygfyiasfg</div>
+        <a href="https://t.me/king_of_puncakes" class="contact-button">Написать мне</a>
+      </div>
+    </div>
+
+    <div id="target" class="content hide">   <!-- блок с выстрелами -->
+        <div class="shot">  
+
+          <input id="isManual" type="checkbox">
+          <!-- проверка на ручную стрельбу и сокрытие полей -->
+          <label for="isManual">Стреляешь вручную?</label>      
+          <div class="manual hide">
+            <div>
+              <input id="inputX" placeholder="Введи X">
+            </div>
+            <div>
+              <input id="inputY" placeholder="Введи Y">
+            </div>
+          </div>  
+          <div class="random">
+            <input id="count" placeholder="Количество выстрелов">
+          </div>
+          <div>
+            <input id="inputR" placeholder="Введи радиус мешени">
+          </div>
+          <button id="shotButton">Выстрел</button>
+          <div class = 'result'>
+            <div>
+              <span id="score">Результат:</span>
+            </div>
+            <div>
+              <button id="resetScore">Очистить</button>
+            </div>
+          </div>
+        </div >
+      </div>
+
+    <div id="matrixCalculator" class="content hide">
+        <div class="matrix">
+            <input id="matrixSize" placeholder="размерность">
+            
+            <div class="matrix-buttons">
+                <button id="get-Zero-matrix" class="matrixButton">Нулевая матрица</button>
+                <button id="get-MainDiag-matrix" class="matrixButton">Единичная матрица</button>
+                <button id="get-SecondDiag-matrix" class="matrixButton">Обменная матрица</button>
+                <button id="get-Upper-matrix" class="matrixButton">Верхнетреугольная</button>
+                <button id="get-Lower-matrix" class="matrixButton">Нижнетреугольная</button>
+                <button id="get-I-matrix" class="matrixButton">Вертикальный отсчёт</button>
+                <button id="get-J-matrix" class="matrixButton">Горизонтальный отсчёт</button>
+            </div>
+            
+            <div id="outputMatrix" class="outputMatrix"></div>
+        </div>
+    </div>
+
+    <div id="calculator" class="content hide">
+      <input id="calculator-input" placeholder="число" disabled>
+      <div>
+        <button class="calculator-number">1</button>
+        <button class="calculator-number">2</button>
+        <button class="calculator-number">3</button>
+        <button class="calculator-number">4</button>
+        <button class="calculator-number">5</button>
+        <button class="calculator-number">6</button>
+        <button class="calculator-number">7</button>
+        <button class="calculator-number">8</button>
+        <button class="calculator-number">9</button>
+        <button class="calculator-number">0</button>
+      </div>
+      <div>
+        <button class="calculator-clear">C</button>
+        <button class="calculator-operand-inter" data-operand="switch">+/-</button>
+      </div>
+      <div>
+        <button class="calculator-operand" data-operand="add">+</button>
+        <button class="calculator-operand" data-operand="sub">-</button>
+        <button class="calculator-operand" data-operand="mult">*</button>
+        <button class="calculator-operand" data-operand="div">/</button>
+        <button class="calculator-operand" data-operand="degree">^</button>
+        <button class="calculator-operand-inter" data-operand="sqrt">
+          <img class="OperandSqrtImg" src="img\sqrt.png" alt="Icon">
+        </button>
+        <button class="calculator-operand-inter" data-operand="factorial">!</button>
+        <button class="calculator-operand-inter" data-operand="module">|a|</button>
+        <button class="calculator-operand-inter" data-operand="dot">.</button>
+        <button class="calculator-calculate">=</button>
+      </div>
+        
+    </div>
+  </div>
+    
+</body>
+</html>
