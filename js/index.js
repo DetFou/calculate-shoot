@@ -3,5 +3,6 @@ window.onload = function() {
     initMatrix();
     initTarget();
     initCalculator();
-}
 
+    new Graph2DPage();
+}

@@ -4,24 +4,28 @@
     <meta charset='utf-8'>
     <title>Стрельба по мишеням</title>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='js/tabs.js'></script>
-    <script src='js/shot.js'></script>
-    <script src='js/matrix.js'></script>
-    <script src='js/calculator.js'></script>
+    <script src="js/modules/Canvas/Canvas.js"></script>
+    <script src='js/pages/tabs.js'></script>
+    <script src='js/pages/shot.js'></script>
+    <script src='js/pages/matrix.js'></script>
+    <script src='js/pages/calculator.js'></script>
+    <script src='js/pages/Graph2DPage.js'></script>
     <script src='js/index.js'></script>
 </head>
 <body>
 
+  <!-- инициализация вкладок -->
   <div class="tabs">
-    <div class="tab active" data-content-id="esse">Эссе</div>
+    <div class="tab" data-content-id="esse">Эссе</div>
     <div class="tab" data-content-id="target">Мишени</div>
     <div class="tab" data-content-id="matrixCalculator">Матрицы</div>
     <div class="tab" data-content-id="calculator">Калькулятор</div>
+    <div class="tab active" data-content-id="graph2D">Графика 2D</div>
   </div>
 
   <div class="contents"> <!-- контенты -->
 
-    <div id="esse" class="content">    <!-- блок с эссе -->
+    <div id="esse" class="content hide">    <!-- блок с эссе -->
       <div class="card">
         <img src="https://sun9-86.userapi.com/s/v1/ig2/hiLiQZKzhxTnB51hg00OiyyBDKDtQkH6qs2_OVWxPE2rYw8ERYwSFbSePSXkC5S_7yK-x1gWUr-fuxUdc89GDwvd.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0" alt="Аватар" class="avatar">
         <div class="name">Минликаев Глеб</div>
@@ -30,6 +34,7 @@
       </div>
     </div>
 
+    <!-- блок с мишенями -->
     <div id="target" class="content hide">   <!-- блок с выстрелами -->
         <div class="shot">  
 
@@ -62,8 +67,7 @@
         </div >
       </div>
 
-
-    <!-- виды матриц -->
+    <!-- блок с видами матриц -->
     <div id="matrixCalculator" class="content hide">
         <div class="matrix">
             <input id="matrixSize" placeholder="размерность">
@@ -82,7 +86,7 @@
         </div>
     </div>
 
-    <!-- калькулятор -->
+    <!-- блок с калькулятором -->
     <div id="calculator" class="content hide">
       <input id="calculator-input" placeholder="число" disabled>
        <div> <!-- цифры -->
@@ -118,6 +122,13 @@
       </div>
         
     </div>
+
+    <!-- блок графика 2D -->
+    <div id="graph2D" class="content">
+      <canvas id="canvas2D"></canvas>
+    </div>
+
+  <!-- конец котентов -->
   </div>
     
 </body>

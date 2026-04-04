@@ -7,7 +7,8 @@ function createMatrix(length, type) {
         }
     }
     
-    switch (type) {   // типы матриц
+    // типы матриц
+    switch (type) {   
     case 'MainDiag':
     for (var i = 0; i < length; i++) arr[i][i] = 1;
     break;
