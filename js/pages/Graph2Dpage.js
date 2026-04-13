@@ -31,6 +31,19 @@ function Graph2DPage() {
         const RIGHT = WIDTH + LEFT;
         const TOP = HEIGHT + BOTTOM;
 
+        // сетка
+        xed = LEFT;
+        while (xed <= RIGHT) {
+            canvas.line(xed, BOTTOM, xed, TOP, 'grey', 1);
+            xed++
+        }
+
+        yed = BOTTOM;
+        while (yed <= TOP) {
+            canvas.line(LEFT, yed, RIGHT, yed, 'grey', 1);
+            yed++
+        }
+
         // Оси
         canvas.line(LEFT, 0, RIGHT, 0);
         canvas.line(0, BOTTOM, 0, TOP);

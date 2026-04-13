@@ -21,7 +21,7 @@ function Canvas({ id, width = 700, height = 700, WIN }) {
     this.line = function(x1,y1, x2,y2, color = '#000', width = 2) {
         context.beginPath();
         context.strokeStyle = color;
-        context.lineWidht = width;
+        context.lineWidth = width;
         context.moveTo(xs(x1), ys(y1));
         context.lineTo(xs(x2), ys(y2));
         context.closePath();

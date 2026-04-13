@@ -1,8 +1,12 @@
 window.onload = function() {
     initTabs();
-    initMatrix();
-    initTarget();
-    initCalculator();
+    shotPage = new ShotPage();
+    matrixPage = new MatrixPage();
+    calculatorPage = new CalculatorPage();
+    graph2DPage = new Graph2DPage();
 
-    new Graph2DPage();
+    shotPage.init();
+    matrixPage.init();
+    calculatorPage.init();
+    graph2DPage.init();
 }
